@@ -1,0 +1,7 @@
+*.sw?
+bazel-bin
+bazel-out
+bazel-proxy
+bazel-testlogs
+node_modules/
+yarn-error.log

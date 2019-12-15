@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "events": "^3.0.0",
+    "kafka-node": "^5.0.0",
+    "sip.js": "^0.15.8"
+  },
+  "devDependencies": {
+    "@bazel/typescript": "^0.42.3",
+    "@types/node": "^12.12.18",
+    "gts": "^1.1.2",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.3"
+  },
+  "scripts": {
+    "check": "gts check",
+    "clean": "gts clean",
+    "fix": "gts fix"
+  }
+}

@@ -1,0 +1,19 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Bazel Build
+      uses: ngalaiko/bazel-action/1.2.1@master
+      with:
+        args: build //...
+    - name: gts check
+      uses: ngalaiko/bazel-action/1.2.1@master
+      with:
+        args: run @nodejs//:node -- node_modules/gts/build/src/cli.js check src/*.ts
